@@ -11,7 +11,9 @@ function App() {
       const newtodolist=[...todolist,newtask]
       setTodolist(newtodolist);
     };
-  const deletetask =()=>{
+  const deletetask =(taskname)=>{
+    const newtodolist =todolist.filter((task)=> task!=taskname)
+    setTodolist(newtodolist);
 
   };
 
