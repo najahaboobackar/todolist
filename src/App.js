@@ -11,7 +11,9 @@ function App() {
       const newtodolist=[...todolist,newtask]
       setTodolist(newtodolist);
     };
-  
+  const deletetask =()=>{
+
+  };
 
   return (
     <div className="App">
@@ -21,7 +23,8 @@ function App() {
       </div>
       <div className="list">
         {todolist.map((task )=> {
-          return <h1>{task}</h1>
+          return <div><h1>{task}</h1>
+          <button onClick={()=>deletetask(task)}>X</button></div>
 
         })}
       </div>
